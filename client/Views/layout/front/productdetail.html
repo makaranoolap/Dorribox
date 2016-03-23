@@ -1,0 +1,105 @@
+<template name="productdetail">
+<div class="container">
+	<div class="content_page_checkout">
+		<h1 style="color:#412419; font-weight:bold;">Product Detail</h1>
+	<div class="row">
+		<div class="col-lg-6">
+		<a href="#">{{getCatname}}</a>
+			<img src="upload/{{getImage image}}" class="thumbnail" alt="" width="300" height="300">
+		</div>
+
+		<div class="col-lg-6">
+			<h2><b>{{title}}</b></h2><br>
+			<b>{{description}}</b><br><br>
+			<b>${{price}}</b><br><br>
+			<div class="col-xs-6 col-sm-2 col-lg-2 select_checkout">
+			<form role="form">
+				<select id="selectQty" name="select_{{id}}" style="border-radius:5px; width:80px; border:2px solid #42210B;">
+						<option selected value="{{quantity}}" style="display: none;">{{quantity}}</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+				</select>
+			</form>
+			</div><br><br>
+					<a href="#" id="addtocart" class="btnAddtocart" style="text-align:center; display:initial;background:#412419;padding:9px 21px;color:#fff;text-decoration:none;"
+					>Add to cart</a>
+
+					<a href="#" id="action">
+						<span id="like_{{_id}}"  style="color:rgb(221, 42, 27); padding-left:15px;cursor:pointer;"  class="glyphicon glyphicon-heart like" aria-hidden="true"> <b>Unfavourite</b></span>
+					</a>
+					<a href="#" id="unaction">
+						<span id="unlike_{{_id}}" style="color:rgb(128, 57, 99); padding-left:15px;cursor:pointer;" class="fa fa-heart-o" aria-hidden="true"> <b>Add Favourite</b></span>
+					</a>
+					</div>
+					{{#if currentUser}}
+					<div class="row">
+					<div class="col-lg-12">
+							{{> commentSubmit}}
+					</div>
+					</div><br>
+					{{else}}
+					<div class="row">
+					<div class="col-lg-12">
+      						<p>Please log in to leave a comment.</p>
+      					</div>
+					</div><br>
+					{{/if}}
+
+					<ul class="comments">
+      				{{#each comments}}
+        			<li>
+    				<h4>
+     				 <span class="author">{{getuser userId}}</span>
+     				 <span class="date">on {{submittedText}}</span>
+   					 </h4>
+    				<p>{{body}}</p>
+  					</li>
+      				{{/each}}
+      				
+    			</ul>
+					<!-- list like products -->
+			<div class="row">
+				<div class="col-lg-12">
+				<h3 style="color:#41231A; font-weight:bold;">Customers who purchased an item that you have recently consulted also bought</h3>
+				<br>
+				<br>
+				{{#each listpro}}
+					<div class="col-xs-6 col-sm-3 col-lg-3 like_products">
+						<a href="/productdetail/{{_id}}"> 
+						<img src="upload/{{getImage image}}" class="img-circle center-block" alt="" width="150" height="150"></a>
+						<div style="font-size:12px; padding:5px">
+						<div class="title text-center" style="color:#412419;">{{title}}
+							
+							
+							<a href="#" id="action">
+							<span id="like_{{_id}}"  style="color:rgb(221, 42, 27); padding-left:15px;cursor:pointer;"  class="glyphicon glyphicon-heart like" aria-hidden="true"></span>
+							</a>
+							<a href="#" id="unaction">
+							<span id="unlike_{{_id}}" style="color:rgb(128, 57, 99); padding-left:15px;cursor:pointer;" class="fa fa-heart-o" aria-hidden="true"></span>
+							</a>
+						
+							
+							
+						</div>
+						<div class="price text-center" style="color:#412419;">${{price}}</div>
+						</div>
+						<div style="padding:0px 20px 30px 20px">
+							<a href="#" id="addtocart" class="" style="text-align:center; display:block;background:#412419;padding:7px 0px 7px 0px;color:#fff;text-decoration:none;"
+							>Add to cart</a>
+						</div>
+					</div>
+				{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</template>

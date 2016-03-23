@@ -1,0 +1,16 @@
+<template name="answer">
+	 <div class="container">
+	 	<div class="row">
+	 		<form>
+		 		<ol>
+		 			{{#each getQuestion}}
+		 			<li>{{txtQuestion}}</li>
+		 			<textarea placeholder="Please anser here....." name="answer" class="answer" rows="3" cols="50"></textarea>
+		 			<input type="hidden" value="{{_id}}" class="qId">
+		 			{{/each}}
+		 		</ol>
+		 		<input type="submit" value="OK" id="btn_submit">
+	 		</form>
+	 	</div>
+	 </div>
+</template>

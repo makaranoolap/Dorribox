@@ -1,0 +1,64 @@
+<template name="productlist">
+	<div class="container">
+		<h1>{{countProductLike}} products like</h1>
+		<div class="container-box">
+			<div class="col-lg-12">
+				<p>{{countProductAll}} products result</p>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-lg-8">
+				<ul class="list-inline">
+					<li><a href="">Recommended</a></li>
+					<li><a href="">Best selling</a></li>
+					<li><a href="">Name</a></li>
+					<li><a href="">Price</a></li>
+					<li><a href="">News</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-lg-4 pull-right">
+				<ul class="list-inline pull-right">
+					<li><a href="">View All</a></li>
+					<li><a href=""> View by page</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<br>
+		<br>
+		<!-- list like products -->
+		<div class="row">
+			<!--start gride-->
+			{{#each listpro }}
+			<div class="col-xs-6 col-sm-3 col-lg-3">
+				<a href="/productdetail/{{_id}}"> 
+				<img src="upload/{{getImage image}}" class="img-circle center-block" alt="" width="150" height="150"></a>
+				<div style="font-size:12px; padding:5px">
+				<div class="title text-center">{{title}}
+					
+					<a href="#" id="action">
+						<span id="like_{{_id}}"  style="color:rgb(221, 42, 27); padding-left:15px;cursor:pointer;"  class="glyphicon glyphicon-heart like" aria-hidden="true"></span>
+					</a>
+					<a href="#" id="unaction">
+						<span id="unlike_{{_id}}" style="color:rgb(128, 57, 99); padding-left:15px;cursor:pointer;" class="fa fa-heart-o" aria-hidden="true"></span>
+					</a>
+				</div>
+				<div class="price text-center" id="price">${{price}}</div>
+				</div>
+				<div style="padding:0px 20px 30px 20px">
+					<a href="#" id="addtocart" class="" style="text-align:center; display:block;background:#412419;padding:7px 0px 7px 0px;color:#fff;text-decoration:none;"
+					>Add to cart</a>
+				</div>
+			</div>
+			{{/each}}
+			<!--end gride-->
+			
+		</div>
+		
+		
+			<br>
+			<br>
+			<br>
+			<br>
+	</div>
+	<!--/container-->
+
+</template>

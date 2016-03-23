@@ -1,0 +1,28 @@
+<template name="recommendation">
+    <div class="container">
+ <div class="cont">
+      <h3>RELATED PRODUCTS</h3>
+     </div>
+
+
+    {{#each products category}}
+        <div class="col-md-3 img">
+            <div class="text-center" >
+                <a href="{{pathFor 'details' id=this._id }}"> <img src="/uploads/{{getImage image}}" class="img-responsive"></a>
+                
+                <p>
+                    <a href="{{pathFor 'details' id=this._id }}"> {{title}}</a>
+                                           
+                </p>
+                <h4><a href="{{pathFor 'details' id=this._id }}"> ${{price}}</a></h4>
+                
+            </div>
+        </div>
+    {{/each}}
+
+    </div>     
+
+    
+
+
+</template>

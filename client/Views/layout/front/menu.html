@@ -1,0 +1,32 @@
+<template name="menu">
+  <div class="top-navg-main" id="menu">
+    <div class="container">
+
+        <div class="top-navg">
+
+       <ul class="res">
+          <li><a href="{{pathFor 'home'}}" class="active hvr-sweep-to-bottom">Home</a></li> 
+          <li><a class="hvr-sweep-to-bottom" href="#">WOMEN<i id="men_show" style="padding-left:5px;" class="fa fa-angle-down"></i><i id="men_hide" style="padding-left:5px;" class="fa fa-angle-up hide"></i></a></li> 
+          <li><a  class="hvr-sweep-to-bottom " href="#">MEN<i id="men_show" style="padding-left:5px;" class="fa fa-angle-down"></i><i id="men_hide" style="padding-left:5px;" class="fa fa-angle-up hide"></i></a></li> 
+          <li><a class="hvr-sweep-to-bottom" href="#">SUBSCRIBE</a></li>
+          <li><a class="hvr-sweep-to-bottom" href="{{pathFor 'contact'}}">CONTACT</a></li> 
+          <li><a class="hvr-sweep-to-bottom" href="#">WEBSINE</a></li>
+            
+      </ul>
+
+                <!-- script-for-menu -->
+               <script>
+                 $( "span.menu" ).click(function() {
+                 $( "ul.res" ).slideToggle( 300, function() {
+                 // Animation complete.
+                  });
+                 });
+              </script>
+              <!-- /script-for-menu -->
+            
+              
+       </div>
+     </div>
+  </div>
+  {{>menucall}}
+</template>

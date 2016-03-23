@@ -1,0 +1,122 @@
+<template name="header">
+	 <script type="text/javascript">
+          	$('span.over').hover(function() {
+  			$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+			}, function() {
+  			$(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+		});
+   </script>
+	<!--header start here-->
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+</script>
+
+<div class="header" id="hhide">
+	<div class="container">
+		<div class="header-main">
+			   <div class="head-left">
+				   	<div class="phone">
+				   		<p><span class="ph-numb">{{profile.username}}</span></p>
+				   	</div>
+	              <div class="clearfix"> </div>
+                </div>
+			   <div class="header-right">
+				   <div class="logo">
+				   	   <h1><a href="#"><img class="img-responsive" src="images/logo.png"></a></h1>
+				   </div>
+				   <div class="header-login">
+					 <div class="top-nav-right">
+						<ul class="list-inline">
+							<!-- search -->
+							<li>
+								<div class="search">		
+									  <a class="play-icon" href="{{pathFor 'searcheIngin'}}"><i > </i></a>
+								</div>
+								<div id="small-dialog" class="mfp-hide">
+									<div class="search-top">
+										<div class="login">
+											<input value="" type="submit">
+											
+										</div>
+
+									</div>				
+								</div>
+							</li>
+							<!-- shop -->
+							<li>
+								<div class="dropdown">
+									    <button style="background:none; border:none;" class="dropdown-toggle" type="button" data-toggle="dropdown"><img style="margin-right:-5px; margin-top: 5px;" src="/images/icon_shop.png" alt=""/>
+									   </button>
+									    <ul class="dropdown-menu bordercart">
+									    	
+									     	<div class="row">
+									     		{{#each cartView.arr}}
+									     		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 add_cart">
+													<a href="{{pathFor 'checkout'}}" align="center">
+														<img src="upload/{{getImage image}}" class="img-responsive center-block" alt="" width="150" height="150"  >
+													</a>
+													<p class="price text-center col-lg-12 col-md-12">{{price}}€</p>
+												</div>
+												<div style="margin:0px 0px 0px 0px;"></div>
+												{{/each}}
+												<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+												<div style="height:20px;"></div>
+												<table class="table">
+													<tr align="center">
+														<td><label>Subtotal:</label></td>
+														<td><label>{{cartView.subtotal}}€</label></td>
+													</tr>
+													<tr align="center">
+														<td><label>Discount:</label></td>
+														<td><label>{{cartView.discount}}€</label></td>
+													</tr>
+													<tr align="center">
+														<td><label>Total:</label></td>
+														<td><label>{{cartView.total}}€</label></td>
+													</tr>
+												</table>
+												</div>
+									     	</div>
+									     	
+									    </ul>
+								 </div>
+								
+							</li>
+							<!-- like -->
+							<li>
+								<div class="dropdown">
+									    <button style="background:none; border:none;" class="dropdown-toggle" type="button" data-toggle="dropdown"><img style="margin-right:-5px; margin-top: 10px;" src="/images/icon_like.png" alt=""/>
+									   </button>
+									    <ul class="dropdown-menu borderlove">
+									     	<div class="row">
+									     		{{#each getFavorite}}
+									     		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 add_cart">
+													<a href="{{pathFor 'productlist'}}">
+														<img src="upload/{{getImage image}}" class="img-responsive center-block" alt="" width="150" height="150">
+													</a>
+													<p class="price text-center">{{title}}</p>
+												</div>
+												{{/each}}
+
+									     	</div>
+									    </ul>
+								 </div>
+							</li>
+						</ul>
+						
+				   </div>
+		      </div>
+		    <div class="clearfix"> </div>
+	     </div>
+	     <div class="clearfix"> </div>
+     </div>
+   </div>
+</div>
+
+<!--header end here-->
+</template>

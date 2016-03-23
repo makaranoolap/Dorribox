@@ -1,0 +1,353 @@
+<template name="profileUser">
+
+<!--Somaly Code head menu open-->
+
+<!--Somaly Code head menu close-->
+
+	<div class="container"><br><br>
+		<h2 style="font-size:25px;">Amani.N</h2>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-7 col-lg-5 col-md-12">
+                        <section class="panel">
+                             <table class="table table-striped table-advance table-hover">
+                                 	{{#with getUserProfile}}
+									<tr>
+										<td>Name</td>
+                                        <td>{{profile.firstname}} {{profile.lastname}}</td>   
+                                    </tr>
+                                   
+                                    <tr>
+                                        <td>EMAIL</td>
+                                        {{#each emails}}
+                                        <td>{{address}}</td>
+                                        {{/each}}
+                                    </tr>
+                                   
+									<tr>
+                                        <td>ADRESSE</td>
+                                        <td>{{profile.pays}}{{profile.ville}}</td>
+                                    </tr>
+									<tr>
+                                        <td>BIRTH DATE</td>
+                                        <td>{{profile.birth}}</td>
+                                    </tr>
+									
+									<tr>
+                                        <td>SEX</td>
+                                        <td>{{profile.sex}}</td>
+                                    </tr>
+                                    {{/with}}
+                                 </table>
+                        </section>
+					<a href="{{pathFor 'editProfile1'}}" class="btn btn-primary">edit</a>
+					<img src="images/win_login.png" class="img-responsive col-xs-12 col-md-12 hidden-xs hidden-md" id="img" style="margin: -78px 0px 0px -290px !important;height: auto;width: 26%;"/>
+            </div>
+		</div>
+		<div class="col-xs-12 col-lg-4 col-md-12 col-lg-offset-8">
+            <h3 class="center-right">Remaining : 60 pt</h3>
+        </div>
+
+
+  <div class="accordion horizontal">
+    <ul>
+        <li style="background-color:#4181C2;">
+            <input type="radio" id="vert-1" name="vert-accordion" checked="checked" />
+            <label for="vert-1" style="border-right:2px solid;">AUG</label>
+            <div class="content">
+                <p><br/>
+                  <div class="col-sm-4">
+                    <h1 class="fontColor"><strong>AUGUST</strong></h1>
+                  </div>
+                  <div class="col-sm-4">
+                     <h4 class="fontColor"><strong>Get started <br>Poin earned</strong></h4>
+                  </div>
+                  <div class="col-sm-4">
+                     <h3 class="fontColor">+0 pt</h3>
+                     <h4 class="fontColor">Used 0 pt</h4>
+                  </div>
+                </p><br/><br/>
+                <p><h5 class="fontColor">1 Oct</h5>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                    aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                      40% Complete
+                    </div>
+                  </div>
+                  <h5 style="padding-top:-5px !important;">1 Oct</h5>
+                </p>
+            </div>
+        </li>
+        <li style="background-color:#D51B5C;">
+            <input type="radio" id="vert-2" name="vert-accordion" />
+            <label for="vert-2" style="border-right:2px solid;">SEP</label>
+            <div class="content">
+                <p><br/>
+                  <div class="col-sm-4">
+                    <h1 class="fontColor"><strong>SEPTEMBER</strong></h1>
+                  </div>
+                  <div class="col-sm-4">
+                      <h4 class="fontColor"><strong>Get started <br>Poin earned</strong></h4>
+                  </div>
+                  <div class="col-sm-4">
+                     <h3 class="fontColor">+0 pt</h3>
+                     <h4 class="fontColor">Used 0 pt</h4>
+                  </div>
+                </p><br/><br/>
+                <p><h5 class="fontColor">1 Oct</h5>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50"
+                    aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                     50% Complete
+                    </div>
+                  </div>
+                </p>  
+            </div>
+        </li>
+        <li style="background-color:#F2DE0E;">
+            <input type="radio" id="vert-3" name="vert-accordion" />
+            <label for="vert-3" style="border-right:2px solid;">OCT</label>
+            <div class="content">
+                <p><br/>
+                  <div class="col-sm-4">
+                    <h1 class="fontColor">OCTOBER</h1>
+                  </div>
+                  <div class="col-sm-4">
+                     <h4 class="fontColor"><strong>Get started <br>Poin earned</strong></h4>
+                  </div>
+                  <div class="col-sm-4">
+                     <h3 class="fontColor">+0 pt</h3>
+                     <h4 class="fontColor">Used 0 pt</h4>
+                  </div>
+                </p><br/><br/>
+                <p class="fontColor"><h5 class="fontColor">1 Oct</h5>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
+                    aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                    60% Complete
+                    </div>
+                  </div>
+                </p>  
+            </div>
+        </li>
+    </ul>
+</div>
+
+        	<div id="css-script-menu">
+  <div class="css-script-center">
+    <div class="css-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* CSSScript Demo Page */
+google_ad_slot = "3025259193";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+      <script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+    <div class="css-script-clear"></div>
+  </div>
+</div>
+<!-- <div class="accordion">
+  <ul>
+    <li>
+      <div> <a href="#">
+        <h2>Title 1</h2>
+        <p>Description 1</p>
+        </a> </div>
+    </li>
+    <li>
+      <div> <a href="#">
+        <h2>Title 2</h2>
+        <p>Description 2</p>
+        </a> </div>
+    </li>
+    <li>
+      <div> <a href="#">
+        <h2>Title 3</h2>
+        <p>Description 3</p>
+        </a> </div>
+    </li>
+    <li>
+      <div> <a href="#">
+        <h2>Title 4</h2>
+        <p>Description 4</p>
+        </a> </div>
+    </li>
+    <li>
+      <div> <a href="#">
+        <h2>Title 5</h2>
+        <p>Description 5</p>
+        </a> </div>
+    </li>
+    <li>
+      <div> <a href="#">
+        <h2>Title 6</h2>
+        <p>Description 6</p>
+        </a> </div>
+    </li>
+  </ul>
+</div> -->
+
+
+		<div class="container">
+			<div class="col-xs-12 col-lg-5 col-md-12 col-lg-offset-8"><br>
+				<h5 class="pull-left" style="text-align:right; margin: 0px 0px 0px -26px !important;">
+					50 Birchbox Points equals $5 to spend
+				<br>on your full-size favorites in the Birchbox Shop!
+				</h5><br>
+			</div>
+		</div>
+			
+		<div class="col-xs-12 col-lg-12 col-md-12"><br>
+			<h2 class="center-left" style="margin: 0px 0px 0px -25px !important;">About me</h2><br>
+		</div>
+		<div class="col-xs-12 col-lg-5 col-md-12">
+			<h5 class="pull-right">
+				Ces réponses sont déstinés a adapter les échantillons
+				<br/>qui vous seront remis dans la Dorribox !
+			</h5><br>
+		</div>
+
+		
+			<br>
+			<br>
+			<br>
+			<br>
+	</div>
+	<div class="container">	
+			<br>
+			<br>	
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                    <p>How would you describe your skin ?</p><br>
+					<div class="row">
+						<div class="col-xs-12 col-md-4 col-sm-12 col-lg-5">
+							<span></span>
+							<!-- slide swiper -->
+								<div class="swiper-container swiper-container-horizontal">
+  								<div style="transition-duration: 0ms; transform: translate3d(-1396px, 0px, 0px);" class="swiper-wrapper">
+  								<div  class="swiper-slide swiper-slide-prev"><img width="140px" class="img-responsive" src="images/medium.png"/></div>
+  								<div class="swiper-slide swiper-slide-active"><img width="140px" class="img-responsive" src="images/check.png"/></div>
+  								<div class="swiper-slide swiper-slide-next"><img width="140px" class="img-responsive" src="images/check.png"/></div>
+  								<div class="swiper-slide"><img width="140px" class="img-responsive" src="images/check.png"/></div>
+  								</div>
+  								<div class="swiper-button-next"></div>
+  								<div class="swiper-button-prev"></div>
+								</div>
+							<!-- /slide swiper -->
+						</div>
+					</div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                    <p>What is your skin tone</p><br>
+					<div class="row">
+						<div class="col-xs-12 col-md-4 col-sm-12 col-lg-5">
+							<span></span>
+							<!-- slide swiper -->
+								<div class="swiper-container swiper-container-horizontal">
+  								<div style="transition-duration: 0ms; transform: translate3d(-1396px, 0px, 0px);" class="swiper-wrapper">
+  								<div  class="swiper-slide swiper-slide-prev"><img width="140px" class="img-responsive" src="images/medium.png"/></div>
+  								<div class="swiper-slide swiper-slide-active"><img width="140px" class="img-responsive" src="images/check.png"/></div>
+  								<div class="swiper-slide swiper-slide-next"><img width="140px" class="img-responsive" src="images/check.png"/></div>
+  								<div class="swiper-slide"><img width="140px" class="img-responsive" src="images/check.png"/></div>
+  								</div>
+  								<div class="swiper-button-next"></div>
+  								<div class="swiper-button-prev"></div>
+								</div>
+							<!-- /slide swiper -->
+						</div>
+					</div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+                    <p>What color is your hair</p><br>
+					<div class="row">
+						<div class="col-xs-12 col-md-4 col-sm-12 col-lg-5">
+							<span></span>
+							<!-- slide swiper -->
+								<div class="swiper-container swiper-container-horizontal">
+  								<div style="transition-duration: 0ms; transform: translate3d(-1396px, 0px, 0px);" class="swiper-wrapper">
+  								<div  class="swiper-slide swiper-slide-prev"><img width="140px"  max-width="65%" height="116px" class="img-responsive" src="images/check.png"/></div>
+  								<div class="swiper-slide swiper-slide-active"><img width="140px" class="img-responsive" src="images/medium.png"/></div>
+  								<div class="swiper-slide swiper-slide-next"><img width="140px" class="img-responsive" src="images/check.png"/></div>
+  								<div class="swiper-slide"><img width="140px" class="img-responsive" src="images/check.png"/></div>
+  								</div>
+  								<div class="swiper-button-next"></div>
+  								<div class="swiper-button-prev"></div>
+								</div>
+							<!-- /slide swiper -->
+						</div>
+					</div>
+            </div>
+		</div>
+		<div class="col-xs-12 col-lg-12 col-md-12"><br>
+			<br>
+			<br>
+			<br>
+			<h2 class="center-left" style="margin: 0px 0px 0px -25px !important;">Sponsorship</h2><br><br>
+			
+		</div>
+		<div class="col-lg-6 col-ms-12 col-xs-12"><a href=""><img src="images/upload_image.png" class="img-responsive"/></a></div>
+		<div class="col-lg-6 col-ms-12 col-xs-12">
+			<p>
+				Description Description Description
+				<br>Description Description Description
+				<br>Description Description Description
+				Description</p><br><br>
+			<p>Referrals : write a mail to your friend</p>
+			<section class="panel">
+				<div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+							<label for="inputEmail1" class="col-lg-4 col-sm-2 control-label" >Friend mail :</label>
+                            <div class="col-lg-8 col-xs-12 col-md-12">
+                                <input type="email" class="form-control" id="inputEmail1" style="border-radius: 0px;border: 1px solid black;width: 253px;"/>
+                            </div>
+                        </div>
+                     </form>
+                </div>
+            </section>
+		</div>
+	</div>
+	 <script src="asset/js/swiper.js"></script>
+		<script>
+		/* slide swiper */
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			paginationClickable: false,
+			spaceBetween: 30,
+			centeredSlides: true,
+			autoplay: 2000,
+			autoplayDisableOnInteraction: false
+		});
+	</script>
+
+  <!--somaly script-->
+
+ 
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".dropdown").onclick(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+</script>
+
+
+
+   <!--somaly script-->
+
+<!--/end container-->
+</template>

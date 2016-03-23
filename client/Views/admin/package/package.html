@@ -1,0 +1,15 @@
+<template name="package">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Package</h3>
+				<ol>
+					{{#each getProduct}}
+
+					<li><input type="checkbox" id="checkProduct"> {{title}}</li>
+					{{/each}}
+				</ol>
+			</div>
+		</div>
+	</div>
+</template>

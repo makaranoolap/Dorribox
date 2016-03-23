@@ -1,0 +1,57 @@
+<template name="sidebar">
+    {{#if isInRole 'admin' 'mygroup' }}
+<body>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a href="/admin"><i class="fa fa-fw fa-dashboard"></i> Admin Menu</a>
+                    </li>
+                    <li>
+                        <a href="/managecategory"><i class="fa fa-fw fa-bar-chart-o"></i> Manage Category</a>
+                    </li>
+                    <li>
+                        <a href="/manageproduct"><i class="fa fa-fw fa-table"></i> Manage Product</a>
+                    </li>
+                    <li>
+                        <a href="/attribute"><i class="fa fa-fw fa-edit"></i> Manage Attribute</a>
+                    </li>
+                    <li>
+                        <a href="/parentattr"><i class="fa fa-fw fa-edit"></i> Manage Parent Attribute</a>
+                    </li>
+                    <li>
+                        <a href="/manageRole"><i class="fa fa-fw fa-edit"></i> Manage User</a>
+                    </li>
+                    <li>
+                        <a href="/manageshop"><i class="fa fa-fw fa-desktop"></i> Manager Shop</a>
+                    </li>
+                    <li>
+                        <a href="/manageparenttag"><i class="fa fa-fw fa-wrench"></i> Manage Parent Tag</a>
+                    </li>
+                    <li>
+                        <a href="/managetag"><i class="fa fa-fw fa-wrench"></i> Manage Tag</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="#">Dropdown Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Dropdown Item</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/addadmin"><i class="fa fa-fw fa-file"></i> Admin</a>
+                    </li>
+                    <li>
+                        <a href="/statistic"><i class="fa fa-fw fa-dashboard"></i> Statistic</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+</body>
+{{else}}
+    <h1 class="text-center"> You are access no permission!</h1>
+{{/if}}
+</template>

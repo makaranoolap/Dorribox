@@ -1,0 +1,53 @@
+<template name="searcheIngin">
+
+	<div class="col-md-12">
+		<h3 class="pull-right inputsearch">{{> EasySearch.Input index=playersIndex }}</h3>
+	</div>
+    <div class="container" style="margin-top:30px;">
+		<!-- list like products -->
+		<div class="row">
+			<!--start gride-->
+			  {{#EasySearch.Each index=playersIndex }}
+			<div class="col-xs-6 col-sm-3 col-lg-3">
+				<img src="upload/{{getImage image}}" class="img-circle center-block" alt="" width="150" height="150">
+				<div style="font-size:12px; padding:5px">
+				<div class="title text-center">{{title}}
+					
+					<!--<a href="#" id="action">
+						<span id="like_{{_id}}"  style="color:rgb(221, 42, 27); padding-left:15px;cursor:pointer;"  class="glyphicon glyphicon-heart like" aria-hidden="true"></span>
+					</a>
+					<a href="#" id="unaction">
+						<span id="unlike_{{_id}}" style="color:rgb(128, 57, 99); padding-left:15px;cursor:pointer;" class="fa fa-heart-o" aria-hidden="true"></span>
+					</a>
+				-->
+				</div>
+				<div class="price text-center" id="price">${{price}}</div>
+				</div>
+				<div style="padding:0px 20px 0px 20px">
+					<a href="#" id="addtocart" class="" style="text-align:center; display:block;background:#412419;padding:7px 0px 7px 0px;color:#fff;text-decoration:none;"
+					>Add to cart</a>
+				</div>
+			</div>
+		  {{/EasySearch.Each}}
+			
+			<!--end gride-->
+			
+		</div>
+		
+		
+			<br>
+			<br>
+			<br>
+			<br>
+	</div>
+	<!--/container-->
+
+    {{> EasySearch.Input index=playersIndex }}
+
+    <ul>
+        {{#EasySearch.Each index=playersIndex }}
+            <li >Name of the player: {{title}}</li>
+        {{/EasySearch.Each}}
+    </ul>
+
+</template>
